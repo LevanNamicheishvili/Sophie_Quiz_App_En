@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz Result</title>
+</head>
+<body>
+    <h1>Quiz Result</h1>
+    <h2>Your Score: {{ score }}</h2>
+
+    {% if wrong_answers %}
+        <h3>Incorrect Answers:</h3>
+        <ul>
+            {% for wrong_answer in wrong_answers %}
+                <li>
+                    <strong>Question:</strong> {{ wrong_answer['question'] }}<br>
+                    <strong>Your Answer:</strong> {{ wrong_answer['selected_option'] }}<br>
+                    <strong>Correct Answer:</strong> {{ wrong_answer['correct_option'] }}
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>
