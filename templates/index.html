@@ -4,8 +4,12 @@
     <title>Quiz App</title>
 </head>
 <body>
-    <h1>Welcome to the Quiz!</h1>
+    <h1>2022 წლის ტესტი ინგლისურ ენაში (1 ვარიანტი)</h1>
     <form action="/" method="POST">
+        <div class="task1"></div>
+        <h2>Task 1: You are going to listen to one text with eight questions. Mark the correct answer A, B or C. You now
+            have 30 seconds to look through the task. You will then hear the recording twice.
+            (8 points)</h2>
         {% for question in questions %}
             <h3>{{ question['question'] }}</h3>
             {% for option in question['options'] %}
@@ -13,6 +17,7 @@
             {% endfor %}
             <br>
         {% endfor %}
+    </div>
         <input type="submit" value="Submit">
     </form>
 </body>
